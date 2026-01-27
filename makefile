@@ -1,5 +1,5 @@
 install:
-	bin/composer install
+	/usr/bin/composer install
 
 start:
 	php -S localhost:8080
