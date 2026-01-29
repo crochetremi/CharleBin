@@ -48,6 +48,10 @@
 		"sort-packages": true
 	},
 	"require-dev": {
-		"phpunit/phpunit" : "^9"
+		"friendsofphp/php-cs-fixer": "^3.66",
+		"phpmd/phpmd": "^2.15",
+		"phpstan/phpstan": "^2.1",
+		"phpunit/phpunit": "^9",
+		"squizlabs/php_codesniffer": "^4.0"
 	}
 }
