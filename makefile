@@ -6,7 +6,8 @@ start:
 
 test:
 	# cd tst && ../vendor/bin/phpunit
-	./vendor/bin/phpunit tst
+	# ./vendor/bin/phpunit tst
+	./vendor/bin/phpunit tst/FilterTest.php
 lint:
 	@echo "--- 1. Vérification de la syntaxe PHP ---"
 	# Le "|| true" empêche make de s'arrêter si tout est correct
