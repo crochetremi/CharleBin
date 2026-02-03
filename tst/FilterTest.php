@@ -11,6 +11,12 @@ class FilterTest extends TestCase
         $this->assertEquals('90 seconds', Filter::formatHumanReadableTime('90sec'));
         $this->assertEquals('1 week', Filter::formatHumanReadableTime('1week'));
         $this->assertEquals('6 months', Filter::formatHumanReadableTime('6months'));
+        $this->assertEquals('1 hour', Filter::formatHumanReadableTime('1hour'));
+        $this->assertEquals('24 hours', Filter::formatHumanReadableTime('24hours'));
+        $this->assertEquals('1 day', Filter::formatHumanReadableTime('1day'));
+        $this->assertEquals('7 days', Filter::formatHumanReadableTime('7days'));
+        $this->assertEquals('1 year', Filter::formatHumanReadableTime('1year'));
+        $this->assertEquals('2 years', Filter::formatHumanReadableTime('2years'));
     }
 
     public function testFilterFailTimesHumanlyReadable()
