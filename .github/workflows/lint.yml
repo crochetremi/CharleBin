@@ -31,3 +31,6 @@ jobs:
       
     - name: Run PHP Mess Detector
       run: ./vendor/bin/phpmd ./lib ansi codesize,unusedcode,naming
+
+    - name: Run PHPUnit Tests
+      run: ./vendor/bin/phpunit tst
