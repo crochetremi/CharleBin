@@ -29,8 +29,12 @@ jobs:
       - name: Install PHP Dependencies
         run: composer install --prefer-dist --no-progress
 
+      - name: Install Node Dependencies
+        run: npm ci
+
       - name: Cypress Run
         uses: cypress-io/github-action@v6
         with:
+          install: false
           start: php -S localhost:8080
           wait-on: 'http://localhost:8080'
