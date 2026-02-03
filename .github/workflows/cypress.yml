@@ -2,9 +2,9 @@ name: CypressTests
 
 on:
   push:
-    branches: [ * ]
+    branches: [main]
   pull_request:
-    branches: [ * ]
+    branches: [main]
 
 jobs:
   cypress-run:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      tourner PrivateBin
+      # Start PrivateBin server
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -23,7 +23,6 @@ jobs:
       - name: Install Dependencies
         run: composer install --prefer-dist --no-progress
 
-      # Lance Cypress et le serveur PHP
       - name: Cypress Run
         uses: cypress-io/github-action@v6
         with:

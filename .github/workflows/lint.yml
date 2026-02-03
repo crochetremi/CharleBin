@@ -2,9 +2,9 @@ name: Lint
 
 on:
   pull_request:
-    branches: [ * ]
+    branches: [main]
   push:
-    branches: [ * ]
+    branches: [main]
 
 jobs:
   lint:
@@ -16,7 +16,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'
+        php-version: '8.2'
         extensions: xml, xmlwriter
         
     - name: Install dependencies
