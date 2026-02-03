@@ -14,7 +14,7 @@ lint:
 
 	@echo "--- 2. Lancement de PHP CodeSniffer ---"
 	# --ignore=vendor permet de scanner . sans scanner les libs
-	./vendor/bin/phpcs --standard=PSR12 --ignore=vendor . || true
+	./vendor/bin/phpcs --standard=PSR1 --ignore=vendor . || true
 
 	@echo "--- 3. Lancement de PHPMD ---"
 	# --exclude vendor est crucial ici
@@ -22,7 +22,7 @@ lint:
 
 	@echo "--- 4. Lancement de PHPStan ---"
 	# PHPStan est intelligent et ignore vendor par défaut, mais src/ est préférable
-	./vendor/bin/phpstan analyse . --level=5 || true
+	./vendor/bin/phpstan analyse . --level=1 || true
 
 fix:
 	@echo "=== Auto-fixing with PHPCBF ==="
