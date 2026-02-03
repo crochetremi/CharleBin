@@ -1,0 +1,31 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches: [ cypress ]
+  pull_request:
+    branches: [ cypress ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      tourner PrivateBin
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: gd, xmlwriter
+
+      - name: Install Dependencies
+        run: composer install --prefer-dist --no-progress
+
+      # Lance Cypress et le serveur PHP
+      - name: Cypress Run
+        uses: cypress-io/github-action@v6
+        with:
+          start: php -S localhost:8080
+          wait-on: 'http://localhost:8080'
