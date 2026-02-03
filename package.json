@@ -1,0 +1,16 @@
+{
+  "name": "charlebin",
+  "version": "1.0.0",
+  "description": "CharleBin est un fork éducatif de [PrivateBin](https://github.com/PrivateBin/PrivateBin), conçu spécifiquement pour permettre aux étudiants d'apprendre à utiliser GitHub et les workflows de collaboration open source.",
+  "main": "cypress.config.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
