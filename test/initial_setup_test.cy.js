@@ -1,7 +1,7 @@
 describe('Basic Test Suite', () => {
   it('should pass a simple assertion', () => {
     expect(true).to.equal(true)
-  })
+  });
 
   it('should visit the homepage', () => {
     cy.visit('/')
